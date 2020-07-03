@@ -40,7 +40,9 @@ h1 {
     cursor: pointer;
 }
 
-
+.restaurant {
+    margin: auto;
+}
 
 
 .fa-film, 
@@ -132,6 +134,7 @@ p{
 
 .Rest-Info{
     background-color: lightgrey ;
+    justify-content: space-around;
 }
 
 .uk-card-body{
