@@ -1,9 +1,10 @@
-
-
-body {
+.container-0 {
     margin: 0;
     margin-bottom: 50px;
     font-family: 'Nunito', sans-serif;
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #hero {
@@ -27,13 +28,11 @@ body {
     z-index:-5;
 }
 
-
-
-
 h1 {
-    font-family: 'League Script', cursive;
-    font-size: 80px;
-    font-weight: 700;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
 }
 
 .nav-item {
@@ -44,23 +43,10 @@ h1 {
     margin: auto;
 }
 
-
 .fa-film, 
 .fa-utensils {
     font-size: 90px;
-
 }  
-
-
-
-
-.footer {
-    position: relative;
-    bottom: 0;
-    height: 60px; 
-    line-height: 50px; 
-   
-}
 
 .content {
     margin-bottom: 50px;
@@ -69,40 +55,7 @@ h1 {
 .wrapper{
     display: flex;
     justify-content: center;
-    align-items: center;
-  
-}
-
-
-
-
-
-
-.welcome_form button{
-    display: block;
-    width: 100%;
-}
-
-
-.welcome_form button{
-    font-size: 22px;
-    padding: 20px 0;
-    border: none;
-    background-color: #ffffff;
-    border-radius: 100px;
-    transition: 0.5 all;
-    color: brown;
-}
-
-.welcome_form button:hover{
-    transform: translateY(-5px);
-    cursor: pointer;
-}
-
-
-.welcome_form button:focus{
-    outline: none;
-
+    align-items: center; 
 }
 
 .footer {
@@ -112,14 +65,21 @@ h1 {
       line-height: 70px;
       color: gray;
       border-top: 0px;
+      display: block;
+      margin-bottom: 0px;
   }
 
   .container1{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 85%;
     
+}
+
+.search-content{
+    width: 50%;
+    margin: auto;
 }
 
 .container1 > div{
@@ -142,14 +102,6 @@ p{
     color: black;
 }
 
-.ianDiv, h2 {
-    color: white;
-}
-
 h1{
  color: blue;
-}
-
-.movieInfo {
-    width: 60%;
 }

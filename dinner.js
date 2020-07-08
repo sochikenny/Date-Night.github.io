@@ -1,11 +1,9 @@
-  
-$("button").on("click", function () {
-    var dinner = $(this).attr("data-rest");
+
+function getMunchies(dinner) {
+    
 
     var queryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&q=" +
-        dinner + "&count=5&sort=rating&apikey=b12fbdce2dfa854d91ec1e69686e185c"
-
-    $(".Rest-Info").empty();
+        dinner + "&count=6&sort=rating&apikey=b12fbdce2dfa854d91ec1e69686e185c"
 
     $.ajax({
         url: queryURL,
@@ -50,5 +48,20 @@ $("button").on("click", function () {
                 $(".container1").append(RestInfoCard);
             }       
         });
+};
+
+$("#SearchBtn").on("click", function (event) {
+    event.preventDefault();
+
+    var dinnerInput = $("#Search-Term").val().trim();
+
+    getMunchies(dinnerInput);
+    $(".Rest-Info").empty();
+   
 });
 
+$("#Search-Term").keypress(function(e){
+    if(e.which == 13){
+        $("#SearchBtn").click();
+    }
+});

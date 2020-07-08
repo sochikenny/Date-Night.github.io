@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/uikit.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap" rel="stylesheet">
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -13,7 +14,6 @@
     <title>Restaurants</title>
 </head>
 <body>
-    <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
     
@@ -28,8 +28,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">HOME</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="restaurants.html">RESTAURANT</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="restaurants.html">MUNCHIES</a>
                         </li>  
                     </ul>
                 </div>
@@ -37,31 +37,33 @@
             </div>
     
         </nav>
-    </header>
-    
+  <div class="container-0">
+     <section>
         <h1>Manhattan's best food spots based on locality</h1>
+    </section>
     
     <br></br>
-    
-<div class = "container1"> 
 
- <p uk-margin>
-    <button class="uk-button uk-button-primary" data-rest="East Village">East Village</button>
-    <button class="uk-button uk-button-secondary" data-rest="Soho">Soho</button>
-    <button class="uk-button uk-button-danger" data-rest="Upper East Side">Upper East Side</button>
-    <button class="uk-button uk-button-primary" data-rest="Lower East Side">Lower East Side</button>
-    <button class="uk-button uk-button-secondary" data-rest="Greenwich Village">Greenwich Village</button>
-    <button class="uk-button uk-button-danger" data-rest="Flatiron">Flatiron District</button>
-    <button class="uk-button uk-button-primary" data-rest="Hell's Kitchen">Hell's Kitchen</button>
-    <button class="uk-button uk-button-secondary" data-rest="Chelsea">Chelsea</button>
-    <button class="uk-button uk-button-danger" data-rest="Midtown">Midtown</button>
-</p> 
-
-
+    <div class="container">
+        <div class="search-content">
+        <section class="search-munchies">
+            <h3>Search by locality: (ex: Chelsea) </h3>
+            <div class="input-group mb-3">
+                <input type="text" id="Search-Term" class="form-control" aria-label="city name"
+                    aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button type="button" id="SearchBtn" class="btn btn-primary btn-lg">search</button>   
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+<div class = "container1">
 </div>
-<br></br>
-<footer></footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="dinner.js"></script>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="dinner.js"></script>
 </body>
 </html>
