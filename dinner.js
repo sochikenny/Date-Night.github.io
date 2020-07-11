@@ -2,7 +2,7 @@
 function getMunchies(dinner) {
     
 
-    var queryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&q=" +
+    const queryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&q=" +
         dinner + "&count=6&sort=rating&apikey=b12fbdce2dfa854d91ec1e69686e185c"
 
     $.ajax({
@@ -13,34 +13,34 @@ function getMunchies(dinner) {
             console.log(queryURL);
             console.log(response);
 
-            var results = response.restaurants
+            const results = response.restaurants
             console.log(results);
 
-            for (var i = 0; i < results.length; i++) {
-                var RestInfoCard = $('<div class = "Rest-Info uk-card uk-card-default" ></div>');
+            for (let i = 0; i < results.length; i++) {
+                const RestInfoCard = $('<div class = "Rest-Info uk-card uk-card-default" ></div>');
                 
-                var RestInfoDiv = $('<div class = "Rest-Info uk-card-body" ></div>');
+                const RestInfoDiv = $('<div class = "Rest-Info uk-card-body" ></div>');
                 
-                var RESTname = results[i].restaurant.name;
-                var pONE = $("<p class = 'uk-card-title'>").text("Name: " + RESTname)
+                const RESTname = results[i].restaurant.name;
+                const pONE = $("<p class = 'uk-card-title'>").text("Name: " + RESTname)
                 
                 RestInfoDiv.append(pONE);
 
-                var RESTaddress = results[i].restaurant.location.address;
-                var pTWO = $("<p>").text("Address: " + RESTaddress);
+                const RESTaddress = results[i].restaurant.location.address;
+                const pTWO = $("<p>").text("Address: " + RESTaddress);
                 RestInfoDiv.append(pTWO);
 
-                var RESTratings = results[i].restaurant.user_rating.aggregate_rating;
-                var RESTreviewnumber = results[i].restaurant.all_reviews_count;
-                var pTHREE = $("<p>").text("Ratings: " + RESTratings + " ; " + " No. of reviews: " + RESTreviewnumber);
+                const RESTratings = results[i].restaurant.user_rating.aggregate_rating;
+                const RESTreviewnumber = results[i].restaurant.all_reviews_count;
+                const pTHREE = $("<p>").text("Ratings: " + RESTratings + " ; " + " No. of reviews: " + RESTreviewnumber);
                 RestInfoDiv.append(pTHREE);
 
-                var RESTwebsite = results[i].restaurant.url;
+                const RESTwebsite = results[i].restaurant.url;
                 RestInfoCard.append(RestInfoDiv);
 
-                var RestInfoimage = $(`<a href = ${RESTwebsite} class = "Rest-Info-Image uk-card-media-bottom" ></a>`);
-                var RESTpics = results[i].restaurant.featured_image;
-                var pFIVE = $("<img>").attr("src", RESTpics);
+                const RestInfoimage = $(`<a href = ${RESTwebsite} class = "Rest-Info-Image uk-card-media-bottom" ></a>`);
+                const RESTpics = results[i].restaurant.featured_image;
+                const pFIVE = $("<img>").attr("src", RESTpics);
 
                 RestInfoimage.append(pFIVE);
                 RestInfoCard.append(RestInfoimage);
@@ -53,7 +53,7 @@ function getMunchies(dinner) {
 $("#SearchBtn").on("click", function (event) {
     event.preventDefault();
 
-    var dinnerInput = $("#Search-Term").val().trim();
+    const dinnerInput = $("#Search-Term").val().trim();
 
     getMunchies(dinnerInput);
     $(".Rest-Info").empty();
