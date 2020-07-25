@@ -5,7 +5,7 @@ This is a simple web application that can be useful to anyone who's new to Manha
 
 ## Live Site
 
-Check out the site: https://sochikenny.github.io/Manhattan-Munchies/ 
+Check out the site <a href='https://sochikenny.github.io/Manhattan-Munchies/'>HERE</a> 
 
 
 
